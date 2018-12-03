@@ -16,4 +16,12 @@ describe Account do
       expect(account.balance). to eq 1000
     end
   end
+
+  describe "#withdrawal" do
+    it { is_expected.to respond_to(:withdrawal).with(1).argument }
+    it "substracts money from the balance" do
+      account.withdrawal(500)
+      expect(account.balance).to eq -500
+    end
+  end
 end
