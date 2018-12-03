@@ -24,4 +24,17 @@ describe Account do
       expect(account.balance).to eq -500
     end
   end
+
+  it 'it should update new balance after withdrawal' do
+    account.deposit('14/01/2018', 2000)
+    account.withdrawal('14/01/2018', 500)
+    expect(account.balance).to eq(1500)
+end
+
+describe "#statement" do
+it 'After deposit, statement has the new transaction with date, amount and balance' do
+    account.deposit('14/01/2018', 2000)
+    expect(account.statement.length).to eq(1)
+  end
+end
 end
