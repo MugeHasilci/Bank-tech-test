@@ -40,10 +40,16 @@ account = Account.new (you start with a new Account statement)
 account.deposit("13/02/2012", 1000) (make a deposit with a date and amount)
 ```
 ```
-account.withdrawal("21/02/2012", 2000) (make a withdrawal with a date and amount)
+account.withdrawal("21/02/2012", 150) (make a withdrawal with a date and amount)
 ```
 ```
 account.show  (will print all of the transactions on screen)
 ```
 5. After account.show, you can either deposit or withdrawal as many times you want and then account.show to display all the transactions together.
 6. When you want to finish the session, type ```exit``` on your terminal
+
+###Screen shot
+
+## Screenshoot from running the app in the terminal:
+
+![alt tag](https://github.com/MugeHasilci/Bank-tech-test.git/blob/master/public/irb.png)
