@@ -20,9 +20,9 @@ class Account
   end
 
   def show
-   puts "date || deposit || withdrawal || balance"
-   @statement.reverse.each do |account|
-     puts account
-   end
- end
+    puts "date || deposit || withdrawal || balance"
+    @statement.reverse.each do |account|
+      puts account
+    end
+  end
 end
