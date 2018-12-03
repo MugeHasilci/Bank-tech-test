@@ -32,9 +32,20 @@ describe Account do
 end
 
 describe "#statement" do
-it 'After deposit, statement has the new transaction with date, amount and balance' do
+  it 'After deposit, statement has the new transaction with date, amount and balance' do
     account.deposit('14/01/2018', 2000)
     expect(account.statement.length).to eq(1)
   end
 end
+
+it 'client can print the statement on screen with date || deposit || withdrawal || balance' do
+  account.deposit("14/01/2018", 2000)
+  expect(account.statement[0]).to eq("14/01/2018 || 2000.00 || || 2000.00")
+end
+
+it 'after withdrawal, checks the account statement has the new transaction with date || deposit || withdrawal || balance' do
+    account.deposit('14/01/2018', 2000)
+    account.withdrawal('14/01/2018', 1000)
+    expect(account.statement.length).to eq(2)
+  end
 end

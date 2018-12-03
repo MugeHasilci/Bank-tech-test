@@ -16,5 +16,6 @@ class Account
   def withdrawal(date, amount)
     @date = date
     @balance -= amount
+    @statement << "#{date} || || #{amount}.00 || #{@balance}.00"
   end
 end
