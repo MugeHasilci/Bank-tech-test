@@ -18,4 +18,11 @@ class Account
     @balance -= amount
     @statement << "#{date} || || #{amount}.00 || #{@balance}.00"
   end
+
+  def show
+   puts "date || deposit || withdrawal || balance"
+   @statement.reverse.each do |account|
+     puts account
+   end
+ end
 end
