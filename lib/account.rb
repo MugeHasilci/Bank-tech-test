@@ -14,6 +14,7 @@ class Account
   end
 
   def withdrawal(date, amount)
+    raise "Withdrawal denied: insufficient funds" if @balance < 1
     @date = date
     @balance -= amount
     @statement << "#{date} || || #{amount}.00 || #{@balance}.00"

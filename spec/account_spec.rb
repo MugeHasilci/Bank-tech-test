@@ -20,8 +20,15 @@ describe Account do
   describe "#withdrawal" do
     it { is_expected.to respond_to(:withdrawal).with(2).argument }
     it "substracts money from the balance" do
+      account.deposit("10-01-2012", 1000)
       account.withdrawal("14-01-2012", 500)
-      expect(account.balance).to eq -500
+      expect(account.balance).to eq 500
+    end
+
+    it 'will not allow transaction under 0' do
+      account.deposit("10-01-2012", 1000)
+      account.withdrawal("14-01-2012", 1000)
+      expect{ account.withdrawal("10-01-2012", 2) }.to raise_error "Withdrawal denied: insufficient funds"
     end
   end
 
@@ -29,7 +36,7 @@ describe Account do
     account.deposit('14/01/2018', 2000)
     account.withdrawal('14/01/2018', 500)
     expect(account.balance).to eq(1500)
-end
+  end
 
 describe "#statement" do
   it 'After deposit, statement has the new transaction with date, amount and balance' do

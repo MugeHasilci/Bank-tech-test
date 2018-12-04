@@ -52,4 +52,4 @@ account.show  (will print all of the transactions on screen)
 
 ## Screenshoot from running the app in the terminal:
 
-![alt tag](https://github.com/MugeHasilci/Bank-tech-test.git/blob/master/public/irb.png)
+![alt tag](https://github.com/MugeHasilci/Bank-tech-test/blob/master/public/irb.png)
