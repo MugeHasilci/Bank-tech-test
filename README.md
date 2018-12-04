@@ -48,8 +48,6 @@ account.show  (will print all of the transactions on screen)
 5. After account.show, you can either deposit or withdrawal as many times you want and then account.show to display all the transactions together.
 6. When you want to finish the session, type ```exit``` on your terminal
 
-###Screen shot
-
 ## Screenshoot from running the app in the terminal:
 
 ![alt tag](https://github.com/MugeHasilci/Bank-tech-test/blob/master/public/irb.png)
